@@ -1,0 +1,478 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+A graphon is a symmetric measurable function 
+\begin_inset Formula $W:[0,1]^{2}\to[0,1]$
+\end_inset
+
+, that is important in the study of 
+\series bold
+dense graphs
+\series default
+.
+ Graphons arise as the fundamental objects in two areas: as the defining
+ objects of exchangeable random graph models and as a natural notion of
+ limit for sequences of dense graphs.
+ Graphons are tied to dense graphs by the following pair of observations:
+ the random graph models defined by graphons give rise to dense graphs 
+\series bold
+almost surely
+\series default
+, and, by the 
+\series bold
+regularity lemma
+\series default
+, graphons capture the structure of arbitrary large dense graphs.
+\end_layout
+
+\begin_layout Standard
+Graphons are sometimes referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+continuous graphs
+\begin_inset Quotes erd
+\end_inset
+
+, but this is bad practice because there are many distinct objects that
+ this label might be applied to.
+ In particular, there are generalizations of graphons to the sparse graph
+ regime that could just as well be called 
+\begin_inset Quotes eld
+\end_inset
+
+continuous graphs.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Definition
+\end_layout
+
+\begin_layout Standard
+A graphon is a measurable function 
+\begin_inset Formula $W:[0,1]^{2}\to[0,1]$
+\end_inset
+
+.
+ Usually a graphon is understood as defining an exchangeable random graph
+ model according to the following scheme:
+\end_layout
+
+\begin_layout Enumerate
+Each vertex 
+\begin_inset Formula $j$
+\end_inset
+
+ of the graph is assigned an independent random value 
+\begin_inset Formula $u_{j}\sim U[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Edge 
+\begin_inset Formula $e_{ij}$
+\end_inset
+
+ is independently included in the graph with probability 
+\begin_inset Formula $W(u_{i},u_{j})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A random graph model is an exchangeable random graph model if and only if
+ it can be defined in terms of a (possibly random) graphon in this way.
+\end_layout
+
+\begin_layout Standard
+It is an immediate consequence of this definition and the law of large numbers
+ that, if 
+\begin_inset Formula $W\neq0$
+\end_inset
+
+, exchangeable random graph models are dense almost surely.
+ 
+\series bold
+(todo: ref OR)
+\end_layout
+
+\begin_layout Section
+Examples
+\end_layout
+
+\begin_layout Standard
+The simplest example of a graphon is 
+\begin_inset Formula $W=p$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $p\in[0,1]$
+\end_inset
+
+.
+ In this case the associated exchangeable random graph model is the 
+\series bold
+Erdos-Renyi
+\series default
+ model that includes each edge independently with probability 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+Erdos-Renyi
+\series default
+ model can be generalized by:
+\end_layout
+
+\begin_layout Enumerate
+Divide the unit square into 
+\begin_inset Formula $K\times K$
+\end_inset
+
+ block
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $W$
+\end_inset
+
+ equal 
+\begin_inset Formula $p_{lm}$
+\end_inset
+
+ on the 
+\begin_inset Formula $l,m$
+\end_inset
+
+th block.
+\end_layout
+
+\begin_layout Standard
+Effectively, this gives rise to the random graph model that has 
+\begin_inset Formula $K$
+\end_inset
+
+ distinct 
+\series bold
+Erdos-Renyi
+\series default
+ graphs with parameters 
+\begin_inset Formula $p_{ll}$
+\end_inset
+
+ respectively and bigraphs between them where each possible edge between
+ blocks 
+\begin_inset Formula $l,l$
+\end_inset
+
+ and 
+\begin_inset Formula $m,m$
+\end_inset
+
+ is included independently with probability 
+\begin_inset Formula $p_{lm}$
+\end_inset
+
+.
+ This is simply the 
+\begin_inset Formula $K$
+\end_inset
+
+ community 
+\series bold
+stochastic block model
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Many other popular random graph models can be understood as exchangeable
+ random graph models defined by some graphon, a detailed survey is included
+ in 
+\series bold
+OR
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Jointly exchangeable adjacency matrices
+\end_layout
+
+\begin_layout Standard
+A random graph of size 
+\begin_inset Formula $n$
+\end_inset
+
+ can be represented as a random 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ adjacency matrix.
+ In order to impose consistency (in the sense of 
+\series bold
+projectivity
+\series default
+) between random graphs of different sizes it is natural to study the sequence
+ of adjacency matrices arising as the upper-left 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ sub-matrices of some infinite array of random variables; this allows us
+ to generate 
+\begin_inset Formula $G_{n}$
+\end_inset
+
+ by adding a node to 
+\begin_inset Formula $G_{n-1}$
+\end_inset
+
+ and sampling edges 
+\begin_inset Formula $e_{jn}$
+\end_inset
+
+ for 
+\begin_inset Formula $j<n$
+\end_inset
+
+.
+ With this perspective, random graphs are defined as random infinite symmetric
+ arrays 
+\begin_inset Formula $(X_{ij})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Following the fundamental importance of 
+\series bold
+exchangeable sequences
+\series default
+ in classical probability, it is natural to look for an analogous notion
+ in the random graph setting.
+ One such notion is given by jointly exchangeable matrices; i.e.
+ random matrices satisfying
+\begin_inset Formula 
+\begin{align*}
+(X_{ij}) & \overset{d}{=}(X_{\sigma(i)\sigma(j)})
+\end{align*}
+
+\end_inset
+
+for all permutations 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ of the natural numbers, where 
+\begin_inset Formula $\overset{d}{=}$
+\end_inset
+
+ means 
+\series bold
+equal in distribution
+\series default
+.
+ Intuitively, this condition means that the distribution of the random graph
+ is unchanged by a relabeling of its vertices: that is, the labels of the
+ vertices carry no information.
+ 
+\end_layout
+
+\begin_layout Standard
+There is a representation theorem for jointly exchangeable random adjacency
+ matrices, analogous to de Finetti's representation theorem for exchangeable
+ sequences.
+ This is a special case of the 
+\series bold
+Aldous-Hoover
+\series default
+ theorem for jointly exchangeable arrays and, in this setting, asserts that
+ the random matrix 
+\begin_inset Formula $(X_{ij})$
+\end_inset
+
+ is generated by:
+\end_layout
+
+\begin_layout Enumerate
+Sample 
+\begin_inset Formula $u_{j}\sim U[0,1]$
+\end_inset
+
+ independently
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X_{ij}=X_{ji}=1$
+\end_inset
+
+ independently at random with probability 
+\begin_inset Formula $W(u_{i},u_{j}),$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $W:[0,1]^{2}\to[0,1]$
+\end_inset
+
+ is a (possibly random) graphon.
+ That is, a random graph model has a jointly exchangeable adjacency matrix
+ if and only if it is a jointly exchangeable random graph model defined
+ in terms of some graphon.
+\end_layout
+
+\begin_layout Section
+Limits of sequences of dense graphs
+\end_layout
+
+\begin_layout Standard
+Consider a sequence of graphs 
+\begin_inset Formula $(G_{n})$
+\end_inset
+
+ where the number of vertices of 
+\begin_inset Formula $G_{n}$
+\end_inset
+
+ goes to infinity.
+ It is possible to define several notions of convergence of such sequences,
+ each of which may give rise to a distinct limit object.
+ For example, if the sequence 
+\begin_inset Formula $(G_{n})$
+\end_inset
+
+ was a realization of an 
+\series bold
+Erdos-Renyi
+\series default
+ graphs with parameter 
+\begin_inset Formula $p$
+\end_inset
+
+ the natural notion of limit would be the edge density of the graphs, which
+ converges to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ In this case it would be natural to say that the limit of the sequence
+ is the constant graphon 
+\begin_inset Formula $W=p$
+\end_inset
+
+.
+ It turns out that for dense graphs a number of apparently distinct notions
+ of convergence are equivalent and under all of them the natural limit object
+ is a graphon.
+ 
+\series bold
+LOV
+\end_layout
+
+\begin_layout Standard
+For instance, yadda yadda yadda
+\end_layout
+
+\begin_layout Section
+Related notions
+\end_layout
+
+\begin_layout Standard
+Graphons are naturally associated with dense simple graphs.
+ There are straightforward extensions to dense directed weighted graphs
+ 
+\series bold
+OR
+\series default
+.
+ There are also recent extensions to the sparse graph regime, from both
+ the perspective of random graph models 
+\series bold
+VR
+\series default
+ and graph limit theory 
+\series bold
+BCetal
+\series default
+.
+\end_layout
+
+\end_body
+\end_document
