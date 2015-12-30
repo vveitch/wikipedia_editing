@@ -1,0 +1,6 @@
+{{Cite journal| last1 = Veitch| first1 = V.| last2 = Roy| first2 = D. M.| title = The Class of Random Graphs Arising from Exchangeable Random Measures| journal = ArXiv e-prints| date = 2015-12}}
+{{Cite journal| last1 = Borgs| first1 = C.| last2 = Chayes| first2 = J. T.| last3 = Cohn| first3 = H.| last4 = Zhao| first4 = Y.| title = An $L^p$ theory of sparse graph convergence I: limits, sparse random graph models, and power law distributions| journal = ArXiv e-prints| date = 2014-01}}
+{{Cite web| last = Center for History and New Media| title = Zotero Quick Start Guide}}
+{{Cite journal| last1 = Borgs| first1 = C.| last2 = Chayes| first2 = J. T.| last3 = Cohn| first3 = H.| last4 = Zhao| first4 = Y.| title = An $L^p$ theory of sparse graph convergence II: LD convergence, quotients, and right convergence| journal = ArXiv e-prints| date = 2014-08}}
+{{Cite book| publisher = American Mathematical Society| last = Lovász| first = L.| title = Large Networks and Graph Limits| date = 2013}}
+{{Cite journal| volume = 37| issue = 2| pages = 437–461| last1 = Orbanz| first1 = P.| last2 = Roy| first2 = D.M.| title = Bayesian Models of Graphs, Arrays and Other Exchangeable Random Structures| journal = Pattern Analysis and Machine Intelligence, IEEE Transactions on| date = 2015-02}}
